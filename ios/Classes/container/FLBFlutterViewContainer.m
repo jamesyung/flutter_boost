@@ -123,6 +123,7 @@ static NSUInteger kInstanceCounter = 0;
 - (void)dealloc
 {
     [self notifyWillDealloc];
+    [self detatchFlutterEngine];
     [NSNotificationCenter.defaultCenter removeObserver:self];
 }
 
